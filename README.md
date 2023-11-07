@@ -1,27 +1,37 @@
-# React + TypeScript + Vite
+# Knowledge Work Web テスト用 React テンプレート
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Knowledge Work の選考に進んでいただきありがとうございます！  
+Web テストで作成していただく、React アプリケーションの雛形リポジトリです。
 
-Currently, two official plugins are available:
+この README や問題文をよく読んでから、受講をお願いします。  
+なお、Web テストには「[Track Test
+](https://tracks.run/products/test/)」というサービスを使用しています。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 事前準備
 
-## Expanding the ESLint configuration
+Web テストを受講する前に、以下のコマンドを実行し、ローカルで React アプリケーションが動作することを確認してください。
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```sh
+npm i
+# ローカルサーバー起動
+npm run dev　
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 受験開始直前
+
+受験を開始すると、案内が表示されます。
+
+1. 問題の提出方法に「ローカル PC」と「ブラウザ」での受験が選択できますが、 `ローカルPC` での受験をおねがいします。
+2. [こちらのページ](https://help.tracks.run/ja/articles/2529372-%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E7%92%B0%E5%A2%83%E3%81%A7%E3%81%AE%E5%8F%97%E9%A8%93%E3%82%92%E8%A8%B1%E5%8F%AF%E3%81%99%E3%82%8B)の「◾️ 受験者の流れ」を参考に、Track 上の案内文に従って、Track CLI の準備を行ってください
+
+## 受験開始直後
+
+受験開始直後にまず以下を行ってからコーディングを開始してください。
+
+1. Track エディタ下部にある、`track clone {url}` コピーし、当リポジトリを clone したディレクトリに必要なデータを clone してください。
+2. 以下のコマンドを実行し、track にビルド済みのファイルをアップロードし、track 上で React アプリが動作することを確認してください。
+   ```sh
+   npm run build
+   track run
+   ```
+3. Track 上の問題文に従い、React アプリケーションを構築してください。Track 上の「解答提出」ボタンを押下する前に、2.と同じ手順で Track へのファイルをアップロードと動作確認を行ってください。
