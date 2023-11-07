@@ -1,0 +1,47 @@
+# Exclude config files
+/.*ignore
+src/generated
+
+# misc
+.env*
+.node-version
+
+# unsupported files
+*.svg
+*.sh
+.gitkeep
+.gitignore
+/public
+
+### copy from .git_ignore
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+public/*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# cache
+build-storybook.log
+.eslintcache
+.stylelintcache
