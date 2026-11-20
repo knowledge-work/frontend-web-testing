@@ -28,7 +28,6 @@ export default defineConfig({
     rolldownOptions: {
       output: {
         format: "iife",
-        inlineDynamicImports: true,
         entryFileNames: "index.js",
         assetFileNames: (asset) =>
           asset.names.some((name) => name.endsWith(".css")) ? "style.css" : "[name][extname]",
