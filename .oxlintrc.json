@@ -4,7 +4,7 @@
   "env": {
     "browser": true
   },
-  "ignorePatterns": ["public"],
+  "ignorePatterns": ["dist", "public"],
   "rules": {
     "react/rules-of-hooks": "error",
     "react/exhaustive-deps": "warn",

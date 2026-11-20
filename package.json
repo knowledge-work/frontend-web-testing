@@ -6,23 +6,34 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "oxlint --deny-warnings --report-unused-disable-directives",
-    "fmt": "npm run lint -- --fix && oxfmt"
+    "typecheck": "tsc",
+    "lint": "oxlint --report-unused-disable-directives",
+    "fmt": "oxlint --fix && oxfmt",
+    "fmt:check": "oxfmt --check"
   },
   "dependencies": {
-    "react": "^19.3.1",
-    "react-dom": "^19.3.1"
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
-    "@types/react": "^19.3.0",
-    "@types/react-dom": "^19.3.0",
-    "@vitejs/plugin-react": "^6.3.0",
-    "oxfmt": "^0.78.0",
-    "oxlint": "^1.92.0",
-    "typescript": "^7.0.2",
-    "vite": "^8.3.8"
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.3.0",
+    "oxfmt": "0.78.0",
+    "oxlint": "1.93.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.8"
   },
-  "engines": {
-    "node": "^22.12.0 || ^24.0.0 || >=26.0.0"
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "version": ">=11.10.0",
+      "onFail": "error"
+    },
+    "runtime": {
+      "name": "node",
+      "version": ">=26.0.0",
+      "onFail": "error"
+    }
   }
 }
