@@ -1,0 +1,32 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:best-practices", ":disableRateLimiting"],
+  "description": [
+    "Same settings as knowledge-work/frontend-coding-interview.",
+    "security:minimumReleaseAgeNpm is ignored because it adds a 3-day rule for npm that would override the 7-day minimumReleaseAge below."
+  ],
+  "ignorePresets": ["security:minimumReleaseAgeNpm"],
+  "timezone": "Asia/Tokyo",
+  "minimumReleaseAge": "7 days",
+  "internalChecksFilter": "strict",
+  "commitMessagePrefix": ":arrow_up:",
+  "labels": ["renovate"],
+  "vulnerabilityAlerts": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "description": "Update types without a release date cannot be checked against minimumReleaseAge, so open them without waiting",
+      "matchUpdateTypes": ["replacement", "pin"],
+      "minimumReleaseAge": null
+    },
+    {
+      "matchDepTypes": ["dependencies"],
+      "groupName": "dependencies"
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "devDependencies"
+    }
+  ]
+}
