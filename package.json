@@ -1,13 +1,12 @@
 {
   "name": "frontend-web-testing",
-  "private": true,
   "version": "0.0.0",
-  "prettier": "prettier-config-kwork",
+  "private": true,
   "scripts": {
     "dev": "webpack serve",
     "build": "tsc && webpack --mode production",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "fmt": "npm run lint -- --fix && prettier --cache --write ."
+    "fmt": "npm run lint -- --fix && oxfmt"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -24,8 +23,7 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
-    "prettier": "^3.0.3",
-    "prettier-config-kwork": "^0.0.10",
+    "oxfmt": "^0.78.0",
     "style-loader": "^3.3.3",
     "ts-loader": "^9.5.0",
     "typescript": "^5.0.2",
